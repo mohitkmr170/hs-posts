@@ -3,7 +3,8 @@ import { SignOutButton, useUser } from "@clerk/clerk-react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function Header(props) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Header(props: any) {
   const router = useRouter();
   const { isLoaded, isSignedIn, user } = useUser();
 
