@@ -28,7 +28,7 @@ export default function Posts() {
     }
   }, [likedPostIds]);
 
-  const onTabClick = (likedPostClicked: boolean) => {
+  const onTabClick = (likedPostClicked) => {
     if (likedPostClicked) {
       setLikedPosts(true);
     } else {
@@ -51,7 +51,7 @@ export default function Posts() {
         <title>Posts</title>
       </Head>
       <Header
-        onTabClick={(likedPostClicked: boolean) => onTabClick(likedPostClicked)}
+        onTabClick={(likedPostClicked) => onTabClick(likedPostClicked)}
         likedPosts={likedPosts}
       />
       <div className="min-h-screen bg-muted p-6">
